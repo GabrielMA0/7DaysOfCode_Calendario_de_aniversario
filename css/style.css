@@ -16,7 +16,7 @@ body {
     background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
     background-repeat: no-repeat;
     height: 100vh;
-    font-family: roboto;
+    font-family: roboto, sans-serif;
 }
 .container {
     display: flex;
