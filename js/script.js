@@ -109,9 +109,21 @@ function removeItem(position) {
 }
 
 function openModal(position) {
+    let people = JSON.parse(localStorage.getItem("people"));
+    let date = people[position].birth;
+    let dateParts = date.split("/");
+    let day = dateParts[0];
+    let month = dateParts[1];
+    let year = dateParts[2];
+
+    let formattedDate = `${year}-${month}-${day}`;
+
     background.classList.remove("hide");
     modal.classList.remove("hide");
     modalNameInput.focus();
+
+    modalNameInput.value = people[position].name;
+    modalBirthInput.value = formattedDate;
 
     btnSave.setAttribute("data-id", position);
 }

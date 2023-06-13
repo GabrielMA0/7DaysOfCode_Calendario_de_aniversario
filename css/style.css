@@ -239,4 +239,7 @@ button:hover {
     .modal {
         width: 90%;
     }
+    .form-modal {
+        font-size: 14px;
+    }
 }
