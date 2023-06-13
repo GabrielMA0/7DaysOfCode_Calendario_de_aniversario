@@ -7,6 +7,7 @@
     --box-shadow: 5px 4px 15px 0px rgba(0, 0, 0, 0.2);
     --border-radius: 2em;
     --border-radius-input: 10px;
+    --padding-mobile: 50px;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
     box-sizing: border-box;
     background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
     font-family: roboto, sans-serif;
 }
@@ -149,10 +151,10 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.6);
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
 }
 .modal {
-    position: absolute;
+    position: fixed;
     background-color: white;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -163,6 +165,7 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 .form-modal {
     display: flex;
@@ -192,4 +195,48 @@ button:hover {
 }
 .hide {
     display: none;
+}
+/* CELULAR */
+@media (max-width: 767px) {
+    .menu {
+        width: 70%;
+        padding: 30px;
+    }
+    .menu h1 {
+        font-size: 20px;
+    }
+    .form {
+        flex-direction: column;
+    }
+    .form label {
+        font-size: 15px;
+    }
+    .form input {
+        width: 100%;
+    }
+    .btn-submit span {
+        font-size: 30px;
+    }
+    .result {
+        margin-top: 2em;
+        width: 90%;
+    }
+    .titles {
+        display: none;
+    }
+    .ul-result {
+        width: 100%;
+        padding: var(--padding-mobile) 0 var(--padding-mobile) 0;
+        font-size: 20px;
+        margin-bottom: 2em;
+    }
+    .div-itens {
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .modal {
+        width: 90%;
+    }
 }
