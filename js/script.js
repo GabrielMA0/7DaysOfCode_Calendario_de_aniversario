@@ -92,19 +92,23 @@ function renderValues() {
 }
 
 function removeItem(position) {
-    let people = JSON.parse(localStorage.getItem("people"));
+    let questions = confirm("Você tem certeza?");
 
-    // Remove o item do array
-    people.splice(position, 1);
+    if (questions === true) {
+        let people = JSON.parse(localStorage.getItem("people"));
 
-    // Atualiza o array no localStorage
-    localStorage.setItem("people", JSON.stringify(people));
+        // Remove o item do array
+        people.splice(position, 1);
 
-    renderValues();
+        // Atualiza o array no localStorage
+        localStorage.setItem("people", JSON.stringify(people));
 
-    if (people.length === 0) {
-        divTitles.classList.add("hide");
-        resultElement.classList.add("hide");
+        renderValues();
+
+        if (people.length === 0) {
+            divTitles.classList.add("hide");
+            resultElement.classList.add("hide");
+        }
     }
 }
 
