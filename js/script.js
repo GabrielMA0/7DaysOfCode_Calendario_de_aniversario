@@ -92,9 +92,9 @@ function renderValues() {
 }
 
 function removeItem(position) {
-    let confirm = confirm("Você tem certeza?");
+    let userConfirmation = confirm("Você tem certeza?");
 
-    if (confirm === true) {
+    if (userConfirmation === true) {
         let people = JSON.parse(localStorage.getItem("people"));
 
         // Remove o item do array
