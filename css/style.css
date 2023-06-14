@@ -74,6 +74,9 @@ button:hover {
 .btn-submit:hover {
     rotate: 45deg;
 }
+.btn-submit2 {
+    display: none;
+}
 .result {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -247,9 +250,10 @@ button:hover {
 @media only screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2) and (pointer: coarse),
     (max-width: 600px) and (min-resolution: 2dppx) {
     .btn-submit {
-        padding: 40px;
+        display: none;
     }
-    .btn-submit:hover {
-        rotate: none;
+    .btn-submit2 {
+        display: flex;
+        padding: 40px;
     }
 }
