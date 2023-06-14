@@ -186,3 +186,13 @@ document.addEventListener("keyup", function (e) {
         btnCancel.click();
     }
 });
+
+function isiPhone() {
+    return /iPhone/i.test(navigator.userAgent);
+}
+
+if (isiPhone) {
+    console.log("Iphone detectado!");
+    let btnSubmit = document.querySelector(".btn-ubmit");
+    btnSubmit.innerHTML = "Adicionar";
+}
