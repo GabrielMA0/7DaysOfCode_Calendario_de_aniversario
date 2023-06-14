@@ -191,8 +191,11 @@ function isiPhone() {
     return /iPhone/i.test(navigator.userAgent);
 }
 
-if (isiPhone) {
+if (isiPhone()) {
     console.log("Iphone detectado!");
-    let btnSubmit = document.querySelector(".btn-ubmit");
-    btnSubmit.innerHTML = "Adicionar";
+
+    let icon = document.querySelector(".material-symbols-outlined");
+    let btnSubmit = document.querySelector(".btn-submit");
+    icon.remove();
+    btnSubmit.innerText = "Adicionar";
 }

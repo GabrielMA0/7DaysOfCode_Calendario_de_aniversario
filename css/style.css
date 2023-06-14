@@ -243,3 +243,13 @@ button:hover {
         font-size: 14px;
     }
 }
+
+@media only screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2) and (pointer: coarse),
+    (max-width: 600px) and (min-resolution: 2dppx) {
+    .btn-submit {
+        padding: 40px;
+    }
+    .btn-submit:hover {
+        rotate: none;
+    }
+}
