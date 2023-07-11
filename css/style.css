@@ -253,10 +253,6 @@ button:hover {
         text-align: center;
     }
     .btn-submit {
-        display: none;
-    }
-    .btn-submit2 {
         display: flex;
-        padding: 40px;
     }
 }
